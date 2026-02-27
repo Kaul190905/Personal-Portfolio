@@ -1,183 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
-</head>
-<body>
-    <header>
-        <a href="#" class="logo">Sakthi S</a>
+    <meta name="description"
+        content="Sakthi S — Full Stack Developer Portfolio. Explore my projects, skills, and experience in web development.">
+    <title>Sakthi S | Portfolio</title>
 
-        <nav>
-            <a href="#home" class="active"> Home</a>
-            <a href="#services" >Services</a>
-            <a href="#skills" >Skills</a>
-            <a href="#projects" >Projects</a>
-            <a href="#education" >Education</a>
-            <a href="#experience" >Experience</a>
-            <a href="#contact" >Contact</a>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== PARTICLE BACKGROUND ==================== -->
+    <div id="particles-js"></div>
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header id="header">
+        <a href="#" class="logo">Sakthi S<span>.</span></a>
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </div>
+        <nav id="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- ==================== HERO ==================== -->
     <section class="home" id="home">
-        <div class="home-img">
-            <img src="Sakthi.S.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Sakthi <S></S></span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Aspiring Full Stack Developer with a strong passion for learning how everything works—from the user interface to the server-side logic. I’m currently diving deep into both front-end and back-end technologies, and I enjoy building projects that bring those skills together. Along the way, I’ve also led teams in projects and hackathons, which taught me the value of collaboration, communication, and staying focused under pressure. I’m always curious, always learning, and excited to grow as a developer every day.</p>
+        <div class="home-content" data-aos="fade-right" data-aos-duration="1000">
+            <h1>Hi, I'm <span class="gradient-text">Sakthi S</span></h1>
+            <h3 class="typing-text">I'm a <span id="typed-output"></span></h3>
+            <p>Aspiring Full Stack Developer with a strong passion for learning how everything works—from the user
+                interface to the server-side logic. I'm currently diving deep into both front-end and back-end
+                technologies, and I enjoy building projects that bring those skills together. Along the way, I've also
+                led teams in projects and hackathons, which taught me the value of collaboration, communication, and
+                staying focused under pressure.</p>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/sakthi-s-37b8b4313?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlfoffsdOT86ZDjdj7HYptA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Kaul190905"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:kaul190905@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/sakthi-s-37b8b4313" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Kaul190905" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="mailto:kaul190905@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="#contact" class="btn glow-btn">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="home-img" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="img-glow-ring">
+                <img src="Sakthi.S.jpg" alt="Sakthi S">
+            </div>
         </div>
     </section>
 
+    <!-- ==================== SERVICES ==================== -->
     <section class="services" id="services">
-  <h2 class="heading">My <span>Services</span></h2>
-  <div class="service-container">
-    <div class="service-box">
-      <i class="fa-solid fa-code"></i>
-      <h3>Web Development</h3>
-      <p>Building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and frameworks.</p>
-    </div>
-    <div class="service-box">
-      <i class="fa-solid fa-paint-brush"></i>
-      <h3>UI/UX Design</h3>
-      <p>Proficient in designing wireframes, interactive prototypes, and responsive UI layouts using Figma. Skilled in building component-based design systems and delivering user-friendly interfaces.</p>
-    </div>
-    <div class="service-box">
-      <i class="fa-solid fa-database"></i>
-      <h3>Database Management</h3>
-      <p>Handling database design, optimization, and integration using MySQL and MongoDB.</p>
-    </div>
-  </div>
-</section>
+        <h2 class="heading" data-aos="fade-up">My <span>Services</span></h2>
+        <div class="card-grid">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and
+                    frameworks.</p>
+            </div>
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon"><i class="fa-solid fa-paint-brush"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Proficient in designing wireframes, interactive prototypes, and responsive UI layouts using Figma.
+                    Skilled in building component-based design systems.</p>
+            </div>
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>Database Management</h3>
+                <p>Handling database design, optimization, and integration using MySQL and MongoDB.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- SKILLS Section -->
-<section class="skills" id="skills">
-  <h2 class="heading">My <span>Skills</span></h2>
-  <div class="skills-container">
-    <div class="skill">
-      <h3>Frontend</h3>
-      <p><li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ReactJS</li>
-        </p>
-    </div>
-    <div class="skill">
-      <h3>Backend</h3>
-      <p><li>C</li>
-        <li>Python</li>
-        </p>
-    </div>
-    <div class="skill">
-      <h3>Database</h3>
-      <p><li>MySQL</li>
-        <li>MongoDB</li></p>
-    </div>
-    <div class="skill">
-      <h3>Tools & Platforms</h3>
-      <p><li>VS Code</li>
-        <li>Git</li>
-        <li>GitHub</li></p>
-    </div>
-  </div>
-</section>
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills" id="skills">
+        <h2 class="heading" data-aos="fade-up">My <span>Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+                <div class="skill-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">ReactJS</span>
+                </div>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                <div class="skill-tags">
+                    <span class="tag">C</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="fa-solid fa-database"></i> Database</h3>
+                <div class="skill-tags">
+                    <span class="tag">MySQL</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="fa-solid fa-wrench"></i> Tools & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="tag">VS Code</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="projects" id="projects">
-  <h2 class="heading">My <span>Projects</span></h2>
-  <div class="experience-container">
-    <div class="exp-box">
-      <h3>Hospital Management System</h3>
-      <p>A Management System that will store the details of the patients and doctors
-            record in a database and manage the appointments between their schedules by using Java and JavaFX</p>
-    </div>
-    <div class="exp-box">
-      <h3>Healthcare Management System</h3>
-      <p>A front-end page for healthcare website using HTML, CSS, JavaScript </p>
-    </div>
-    <div class="exp-box">
-      <h3>Ocean Literacy Game</h3>
-      <p>A game in the concept of Ocean Literacy using GoDot Engine </p>
-    </div>
-  </div>
-</section>
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="projects" id="projects">
+        <h2 class="heading" data-aos="fade-up">My <span>Projects</span></h2>
+        <div class="card-grid">
+            <div class="glass-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-icon"><i class="fa-solid fa-hospital"></i></div>
+                <h3>Hospital Management System</h3>
+                <p>A system to store patient and doctor records in a database and manage appointments using Java and
+                    JavaFX.</p>
+            </div>
+            <div class="glass-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-icon"><i class="fa-solid fa-heartbeat"></i></div>
+                <h3>Healthcare Management System</h3>
+                <p>A front-end page for a healthcare website using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="glass-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-icon"><i class="fa-solid fa-water"></i></div>
+                <h3>Ocean Literacy Game</h3>
+                <p>A game based on the concept of Ocean Literacy, built using the Godot Engine.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- EDUCATION Section -->
-<section class="education" id="education">
-  <h2 class="heading">My <span>Education</span></h2>
-  <div class="timeline">
-    <div class="edu-box">
-      <h3>Bachelor's in Computer Science</h3>
-      <p>Agni College of Technology - Ongoing<br>Learning full stack development, problem solving.</p>
-    </div>
-    <div class="edu-box">
-      <h3>Higher Secondary Education</h3>
-      <p>State Board - Completed in 2023<br>Major in Computer Science.</p>
-    </div>
-  </div>
-</section>
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="education" id="education">
+        <h2 class="heading" data-aos="fade-up">My <span>Education</span></h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Bachelor's in Computer Science</h3>
+                    <span class="timeline-date">Ongoing</span>
+                    <p>Agni College of Technology — Learning full stack development, problem solving.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3><i class="fa-solid fa-school"></i> Higher Secondary Education</h3>
+                    <span class="timeline-date">Completed 2023</span>
+                    <p>State Board — Major in Computer Science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCE Section -->
-<section class="experience" id="experience">
-  <h2 class="heading">My <span>Experience</span></h2>
-  <div class="experience-container">
-    <div class="exp-box">
-      <h3>Full-Stack Web Developer Intern</h3>
-      <p>Future Interns - May 2025 - current<br>Working on building dynamic websites and integrating APIs.</p>
-    </div>
-    <div class="exp-box">
-      <h3>Team Lead - College Hackathon</h3>
-      <p>Led a team of 5 members to develop a healthcare interface using full-stack technologies.</p>
-    </div>
-  </div>
-</section>
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="experience" id="experience">
+        <h2 class="heading" data-aos="fade-up">My <span>Experience</span></h2>
+        <div class="card-grid two-col">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Full-Stack Web Developer Intern</h3>
+                <span class="exp-date">Future Interns — May 2025 - Present</span>
+                <p>Working on building dynamic websites and integrating APIs.</p>
+            </div>
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Team Lead — College Hackathon</h3>
+                <p>Led a team of 5 members to develop a healthcare interface using full-stack technologies.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- CONTACT Section -->
-<section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me</span></h2>
-  <form action="#" method="post">
-    <div class="input-group">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-    </div>
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+        <h2 class="heading" data-aos="fade-up">Contact <span>Me</span></h2>
+        <form action="#" method="post" class="glass-form" data-aos="fade-up" data-aos-delay="100">
+            <div class="input-row">
+                <div class="input-wrapper">
+                    <input type="text" name="name" id="contact-name" placeholder=" " required>
+                    <label for="contact-name">Your Name</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" name="email" id="contact-email" placeholder=" " required>
+                    <label for="contact-email">Your Email</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <textarea name="message" id="contact-message" rows="6" placeholder=" " required></textarea>
+                <label for="contact-message">Your Message</label>
+            </div>
+            <button type="submit" class="btn glow-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </section>
 
-<script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">Sakthi<span>.</span></a>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sakthi-s-37b8b4313" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Kaul190905" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="mailto:kaul190905@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Sakthi S. All rights reserved.</p>
+        </div>
+    </footer>
 
-  window.onscroll = () => {
-    let current = "";
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.clientHeight;
+    <script>
+        // ====== AOS Init ======
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
 
-      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
+        // ====== Typed.js Init ======
+        new Typed('#typed-output', {
+            strings: ['Web Developer', 'Full Stack Developer', 'UI/UX Designer', 'Problem Solver'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 2000,
+            loop: true
+        });
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  };
-</script>
+        // ====== Particles.js Init ======
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 900 } },
+                color: { value: ['#00f0ff', '#7b2ff7', '#ff2d95'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.4, random: true, anim: { enable: true, speed: 0.8, opacity_min: 0.1 } },
+                size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.5 } },
+                line_linked: { enable: true, distance: 140, color: '#00f0ff', opacity: 0.15, width: 1 },
+                move: { enable: true, speed: 1.5, direction: 'none', random: true, out_mode: 'out' }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'grab' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 180, line_linked: { opacity: 0.4 } },
+                    push: { particles_nb: 3 }
+                }
+            },
+            retina_detect: true
+        });
+
+        // ====== Active Nav on Scroll ======
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('#navbar a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Header blur on scroll
+            const header = document.getElementById('header');
+            header.classList.toggle('scrolled', scrollY > 50);
+        });
+
+        // ====== Hamburger Menu ======
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('mobile-open');
+        });
+
+        // Close menu on nav click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('mobile-open');
+            });
+        });
+    </script>
 
 </body>
+
 </html>
